@@ -1,0 +1,9 @@
+<apex:page >
+<apex:include pageName="BasicTemplate"/>
+<!--apex:composition template="BasicTemplate"-->
+<apex:define name="body">
+<p> Hi i'm prasad and learning VF </p>
+<p> if need any help , please call me </p>
+</apex:define>
+<!--/apex:composition-->
+</apex:page>

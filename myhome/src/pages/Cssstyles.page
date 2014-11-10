@@ -1,0 +1,10 @@
+<apex:page standardcontroller="account" title="this is my standard page" sidebar="false" showHeader="false">
+<apex:form title="Enter the inputs">
+<apex:pageblock title="Use this block to enter the values">
+<apex:pageblockSection title="This section is perfect to enter the values" columns="3">
+<apex:inputText value="{!account.name}"/>
+<apex:commandButton value="save" action="{!save}"/>
+</apex:pageblockSection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

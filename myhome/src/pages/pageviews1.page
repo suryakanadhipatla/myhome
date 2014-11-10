@@ -1,0 +1,11 @@
+<apex:page showheader="true" sidebar="false" standardcontroller="Contact">  
+<apex:form >  
+    
+<apex:pageblock >  
+    <apex:outputlabel >  
+     Your Date Birth :   
+    </apex:outputlabel>  
+    <apex:inputfield value="{!Contact.Birthdate}">  
+</apex:inputfield></apex:pageblock>  
+</apex:form>  
+</apex:page>

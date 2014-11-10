@@ -1,0 +1,10 @@
+<apex:page standardcontroller="account" sidebar="false" showheader="false" standardStylesheets="false">
+<h1> Hi welcome to my VF tutorial </h1>
+<apex:form >
+<apex:pageblock >
+<apex:pageblockbuttons >
+<apex:commandButton value="Done"/>
+</apex:pageblockbuttons>
+</apex:pageblock>
+</apex:form>
+</apex:page>

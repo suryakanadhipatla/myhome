@@ -1,0 +1,13 @@
+<apex:page >
+<style>
+h1 {color:red}
+body {color:green}
+</style>
+<apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/>
+<div style ="color:green">
+<h2> This is the basic page style </h2>
+<p> there are cruel people </P>
+</div>
+<apex:insert name="body">
+</apex:insert>
+</apex:page>

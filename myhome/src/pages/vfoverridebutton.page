@@ -1,0 +1,11 @@
+<apex:page standardController="Account" extensions="SimpleDemoController1">
+  <apex:form >
+    <apex:pageBlock >
+     <br> Account Name : <apex:outputField value="{!accRec.Name}"/>
+</br>
+     <br> Account No. :<apex:outputField value="{!accRec.Accountnumber}"/>
+</br>
+      Annual Revenue :<apex:outputField value="{!accRec.annualrevenue}"/>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

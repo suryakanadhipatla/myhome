@@ -1,0 +1,20 @@
+<apex:page standardController="merchandise__c" recordsetvar="products">
+<apex:pageBlock >
+<apex:pageblocksection columns="1" >
+<apex:pageblockTable value="{!products}" var="pitem">
+<apex:column headerValue="name of the product">
+<apex:outputtext value="{!pitem.name}">
+</apex:outputtext>
+</apex:column>
+<apex:column headerValue="Total inventory">
+<apex:outputtext value="{!pitem.Total_inventory__c}">
+</apex:outputtext>
+</apex:column>
+<apex:column headerValue="price per item">
+<apex:outputtext value="{!pitem.price__c}">
+</apex:outputtext>
+</apex:column>
+</apex:pageblockTable>
+</apex:pageblocksection>
+</apex:pageBlock>
+</apex:page>

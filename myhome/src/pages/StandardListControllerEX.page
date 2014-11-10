@@ -1,0 +1,18 @@
+<apex:page standardcontroller="opportunity" recordSetVar="opportunities">
+  <apex:form >
+  <apex:pageBlock title="here are the list of oppurtunities">
+  <apex:pageblockbuttons >
+  <apex:commandButton value="save" action="{!save}"/>
+  </apex:pageblockbuttons>
+  <apex:pageblockTable value="{!opportunities}" var="opp">
+  <apex:column headerValue="Opp name" value="{!opp.name}"/>
+    <apex:column headerValue="Opp amount">
+    <apex:inputfield value="{!opp.amount}"/>
+  </apex:column>
+  <apex:column headerValue="Opp closedate">
+ <apex:inputfield value="{!opp.closedate}"/>
+  </apex:column>
+    </apex:pageblockTable>
+    </apex:pageBlock>
+  </apex:form>
+  </apex:page>

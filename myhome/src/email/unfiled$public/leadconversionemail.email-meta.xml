@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>this template is used to alert the the user to convert lead whose lead score is 45.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>leadconversionemail</name>
+    <style>none</style>
+    <subject>convert lead</subject>
+    <type>text</type>
+</EmailTemplate>

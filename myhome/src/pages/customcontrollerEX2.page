@@ -1,0 +1,7 @@
+<apex:page controller="displaystopwatch" >
+<apex:form >
+<apex:outputtext value="watch the counter {!cycles}" id="outid" rendered="flse"/>
+<apex:actionstatus starttext="(updating counter...)" stoptext=" (updated counter)" id="statusid"/>
+<apex:actionpoller action="{!incremnetcounter}" rerender="outid" interval="5" status="statusid"/>
+</apex:form>
+</apex:page>

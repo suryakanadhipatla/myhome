@@ -1,0 +1,24 @@
+<apex:page controller="ListCustomSett">
+ <apex:form id="formId" >
+ <script>
+ function getStateValue()
+ {
+ 
+   alert('state val:'+document.getElementById('{!$Component.formId.blockId.secId.stateId}').value);
+ 
+ 
+ }
+ </script>
+ <apex:pageBlock id="blockId">
+ <apex:pageblockSection id="secId" title="Custom settings Demo">
+ <apex:selectList value="{!state}" id="stateId" size="1" onchange="getStateValue()">
+  <apex:selectOptions value="{!stateList}"></apex:selectOptions>
+ </apex:selectList>
+ 
+ </apex:pageblockSection>
+ 
+ </apex:pageBlock>
+ 
+ </apex:form>
+ 
+</apex:page>

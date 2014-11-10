@@ -1,0 +1,18 @@
+<apex:page standardcontroller="account" extensions="actionstatus">
+    <apex:form >
+    <apex:pageblock >
+    <apex:pageBlockSection columns="3">
+    <apex:outputfield value="{!account.rating}"/>
+        <!--apex:outputpanel id="counter"-->
+       <h1>hiii here is the updated :</h1> <apex:outputtext value="{!count}" id="counter" /><br></br>
+            <apex:commandButton action="{!incrementCounter}"  value="Click Me!" rerender="counter" status="counterStatus"/>
+            
+                            <apex:dataList id="counter1" rendered="false" value="{!account.rating}" var="rec" >{!rec}</apex:dataList>    
+               <apex:actionStatus id="counterStatus" 
+                           startText=" (incrementing...)" 
+                           stopText=" (done)"/>
+                           </apex:pageBlockSection>
+                           </apex:pageblock>
+    </apex:form>
+    
+</apex:page>

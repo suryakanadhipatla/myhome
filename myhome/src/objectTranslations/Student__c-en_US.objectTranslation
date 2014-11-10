@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Student</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Students</value>
+    </caseValues>
+    <fields>
+        <help><!-- Select the appropriative Degree from drop down --></help>
+        <label><!-- Degree --></label>
+        <name>Degree__c</name>
+        <picklistValues>
+            <masterLabel>Graduation</masterLabel>
+            <translation><!-- Graduation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Graduation</masterLabel>
+            <translation><!-- Post Graduation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Graduation</masterLabel>
+            <translation><!-- Under Graduation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hostel --></label>
+        <name>Hostel__c</name>
+        <relationshipLabel><!-- Students --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- please select the approriative specialization --></help>
+        <label><!-- Specialization --></label>
+        <name>Specialization__c</name>
+        <picklistValues>
+            <masterLabel>BE</masterLabel>
+            <translation><!-- BE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTech</masterLabel>
+            <translation><!-- BTech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bcom</masterLabel>
+            <translation><!-- Bcom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bsc</masterLabel>
+            <translation><!-- Bsc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation><!-- ME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mtech</masterLabel>
+            <translation><!-- Mtech --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- college --></label>
+        <name>collegename__c</name>
+        <relationshipLabel><!-- Students --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- number of backlocks --></label>
+        <name>number_of_backlocks__c</name>
+    </fields>
+    <layouts>
+        <layout>Student Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- eucation etails --></label>
+            <section>eucation etails</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- SC students --></label>
+        <name>SC_students</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

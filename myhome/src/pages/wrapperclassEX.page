@@ -1,0 +1,14 @@
+<apex:page standardController="account" extensions="wrapperDemoclass">
+<apex:form >
+<apex:pageBlock title="Table">
+<apex:pageBlockTable value="{!wrapobj}" var="rec">
+<apex:column headerValue="account name" value="{!rec.acclist.name}"/>
+<apex:column headerValue="account phone" value="{!rec.acclist.phone}"/>
+<apex:column headerValue="account rating" value="{!rec.acclist.rating}"/>
+<apex:column headerValue="checkbox name">
+<!--apex:inputcheckbox value="{!rec.checkbox}"/-->
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

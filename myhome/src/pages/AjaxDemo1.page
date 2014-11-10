@@ -1,0 +1,35 @@
+<apex:page standardController="Account" id="PageId" Extensions="ajaxDemo" >
+  
+  <script>
+  
+   function getMessage()
+   {
+   
+   alert(document.getElementById('id_test').value);
+    
+    alert('accName:'+document.getElementById('{!$Component.formId.blockid.secId.accName}').value);
+     alert('accPhone:'+document.getElementById('{!$Component.formId.blockid.secId.accPhone}').value);
+    
+   getInfo();
+   
+   }   
+  </script>
+  
+  <apex:form id="formId" >
+  <apex:pageBlock id="blockid">
+  <apex:pageblockSection id="secId" title="Account Info">
+  <apex:inputField id="accName"  value="{!account.name}"/>
+  <apex:inputField id="accPhone" value="{!account.phone}"/>
+  <input id="id_test" type="text" value="sfdc" />
+  <apex:inputCheckbox onclick="getMessage();"/>  
+  <apex:actionFunction name="getInfo" action="{!msgIno}" reRender="msginfo,msginfo1" />
+  </apex:pageblockSection>
+  <apex:outputpanel id="msginfo">
+  <apex:outputLabel value="{!msg}" ></apex:outputLabel>
+  </apex:outputpanel>  
+   <apex:outputpanel id="msginfo1">
+  <apex:outputLabel value="{!msg1}" ></apex:outputLabel>
+  </apex:outputpanel>  
+  </apex:pageBlock>    
+  </apex:form>  
+</apex:page>

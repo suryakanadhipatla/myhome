@@ -1,0 +1,17 @@
+<apex:page controller="cusControllerEx">
+<apex:pagemessages />
+<apex:form >
+<apex:pageblock >
+<apex:pageBlockSection title="Login">
+<apex:outputLabel value="{!$Label.UserName}"></apex:outputLabel> <apex:inputtext value="{!userName}"/><br/>
+Password : <apex:inputSecret value="{!password}" /><br/>
+<apex:commandButton action="{!login}" value="Login"/>
+
+</apex:pageBlockSection>
+
+</apex:pageblock>
+
+
+</apex:form>
+ 
+</apex:page>

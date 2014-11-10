@@ -1,0 +1,14 @@
+<apex:page standardcontroller="account">
+<apex:form >
+<apex:pageblock >
+<apex:pageblocksection columns="2">
+<apex:inputField value="{!account.name}" label="my name"/>
+<apex:inputtext value="{!account.rating}"/>
+<apex:outputtext value="{!account.name}" label="my name is"/>
+<apex:inputField value="{!account.name}"/>
+<apex:outputField value="{!account.rating}"/>
+<apex:inputcheckbox label="Male?"/>
+</apex:pageblocksection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Web_Lead_autoResponse</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <senderEmail>prasadavala@yahoo.com</senderEmail>
+            <senderName>prasad</senderName>
+            <template>unfiled$public/MarketingProductInquiryResponse</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

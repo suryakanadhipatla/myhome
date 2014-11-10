@@ -1,0 +1,52 @@
+<apex:page standardController="Account" >
+<apex:form >
+<apex:pageBlock >
+  <apex:pageBlockSection title="Account Info">
+  
+    <apex:outputText value="{!account.name}" ></apex:outputText>
+    <apex:outputText value="{!account.accountnumber}" ></apex:outputText>
+    <apex:outputText value="{!account.rating}" ></apex:outputText>
+   
+  </apex:pageBlockSection>
+
+<apex:pageBlockSection title="Contact Info" columns="1">
+<apex:pageblocktable value="{!account.contacts}" var="con" >
+<apex:column value="{!con.name}" />
+<apex:column value="{!con.phone}" />
+<apex:column value="{!con.email}" />
+
+ </apex:pageblocktable>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Data table list" columns="1">
+<apex:Datatable value="{!account.contacts}" var="con" >
+<apex:column value="{!con.name}" headerValue="name" /> &nbsp;&nbsp;
+<apex:column value="{!con.phone}" headerValue="Phone" />&nbsp;&nbsp;
+<apex:column value="{!con.email}" headerValue="Email" />
+
+ </apex:Datatable>
+
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Data list" columns="1">
+<apex:DataList value="{!account.contacts}" var="con" >
+<apex:outputLabel value="{!con.name}"  /> &nbsp;&nbsp;
+<apex:outputLabel value="{!con.phone}" />&nbsp;&nbsp;
+<apex:outputLabel value="{!con.email}"  />
+
+ </apex:DataList>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Repeat" columns="1">
+<apex:repeat value="{!account.contacts}" var="con" >
+<apex:outputLabel value="{!con.name}"  /> &nbsp;&nbsp;
+<apex:outputLabel value="{!con.phone}" />&nbsp;&nbsp;
+<apex:outputLabel value="{!con.email}"  />
+
+ </apex:repeat>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

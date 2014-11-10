@@ -1,0 +1,23 @@
+<apex:page standardcontroller="account" sidebar="false" showheader="false" standardStylesheets="false">
+<apex:form >
+<apex:pageBlock title="This is our account details" >
+<apex:pageblocksection columns="3">
+<apex:inputfield value="{!account.name}">
+</apex:inputfield>
+<apex:inputfield value="{!account.accountnumber}">
+</apex:inputfield>
+</apex:pageblocksection>
+<apex:pageblockbuttons >
+<apex:commandbutton action="{!save}" value="save">
+</apex:commandbutton>
+<apex:commandbutton action="{!Cancel}" value="Cancel">
+</apex:commandbutton>
+<apex:commandlink action="{!edit}" value="edit">
+</apex:commandlink>
+<apex:outputlink value="{!$Page.customSettingsEx}" >
+click me
+</apex:outputlink>
+</apex:pageblockbuttons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page standardcontroller="account" extensions="pageviews"  action="{!actioncomponent}">
+ <apex:pageblock >
+ <apex:outputtext id="outputid" >
+ <h1> Page views {!count} as of now </h1>
+ <apex:actionSupport action="{!actioncomponent}" rerender="outputid" />
+ </apex:outputtext>
+ </apex:pageblock>
+</apex:page>

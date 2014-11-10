@@ -1,0 +1,36 @@
+<apex:page standardstylesheets="false" showHeader="false">
+<apex:form >
+    <!--<apex:stylesheet value="{!$Resource.Button1}"/> -->
+    <style>
+    h1
+{
+color:yellow;
+}
+.button1
+{
+background-color:#00FF00;
+font-weight:bold;
+color:#E56717;
+}
+.button2
+{
+background-color:#C12283;
+font-weight:bold;
+color:#EE9A4D;
+}
+a:hover
+{
+color:#F665AB;
+}
+a
+{
+color:#52D017;
+font-size:20px;
+}
+    </style>
+    <h1> This text is displayed using CSS </h1>
+        <apex:commandButton styleclass="button1" value="Click Me!"/>
+        <apex:commandButton style="background-color:green;" value="Click Me!"/>
+        <apex:commandlink value="Clik me!"/>
+    </apex:form>
+</apex:page>

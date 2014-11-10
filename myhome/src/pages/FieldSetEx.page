@@ -1,0 +1,14 @@
+<apex:page standardController="Account" >
+<apex:form >
+ <apex:pageblock >
+ <apex:pageBlockSection >
+ <apex:repeat value="{!$ObjectType.Account.fieldsets.AccountField_set}" var="fieldVal">
+ 
+    <apex:inputField value="{!account[fieldVal]}"/>
+ 
+ 
+ </apex:repeat>
+ </apex:pageBlockSection>
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

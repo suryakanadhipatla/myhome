@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>invoice__c</fullName>
+        <externalId>false</externalId>
+        <label>invoice</label>
+        <referenceTo>invoice__c</referenceTo>
+        <relationshipLabel>line items</relationshipLabel>
+        <relationshipName>line_items</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>merchandise__c</fullName>
+        <externalId>false</externalId>
+        <label>merchandise</label>
+        <referenceTo>merchandise__c</referenceTo>
+        <relationshipLabel>line items</relationshipLabel>
+        <relationshipName>line_items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>total_units__c</fullName>
+        <externalId>false</externalId>
+        <label>total units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>unitprice__c</fullName>
+        <externalId>false</externalId>
+        <label>unitprice</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>value__c</fullName>
+        <externalId>false</externalId>
+        <formula>total_units__c  *  unitprice__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>line item</label>
+    <nameField>
+        <label>line item Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>line items</pluralLabel>
+    <recordTypes>
+        <fullName>cement_company</fullName>
+        <active>true</active>
+        <label>cement company</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>garment_factory</fullName>
+        <active>true</active>
+        <label>garment factory</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>check_inventory</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(ISNEW(),merchandise__r.Total_inventory__c &lt;  total_units__c ,IF(total_units__c &lt; PRIORVALUE(total_units__c),FALSE, merchandise__r.Total_inventory__c &lt; (total_units__c-PRIORVALUE(total_units__c))))</errorConditionFormula>
+        <errorDisplayField>total_units__c</errorDisplayField>
+        <errorMessage>Inventory is out of stock</errorMessage>
+    </validationRules>
+</CustomObject>

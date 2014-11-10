@@ -1,0 +1,13 @@
+<apex:page controller="mycontroller1">
+<apex:form >
+ <apex:pageBlock title="example for re render" >
+ <apex:pageBlockButtons location="bottom">
+ <apex:commandButton action="{!clickheremethod}" value="clickme" reRender="blkdetails"/>
+  </apex:pageBlockButtons>
+ </apex:pageBlock>
+ <apex:pageBlock id="blkdetails">
+  <apex:outputtext value="{!outputtext}" >
+    </apex:outputtext>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

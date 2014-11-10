@@ -1,0 +1,7 @@
+<apex:page >
+  
+  <c:ComponentEx borderWidth="5" color="green" text="SFDC---" ></c:ComponentEx>
+  
+   <c:ComponentEx borderWidth="5" color="red" ></c:ComponentEx>
+  
+</apex:page>

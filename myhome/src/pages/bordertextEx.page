@@ -1,0 +1,6 @@
+<apex:page >
+ <c:BoxedText TEXT="my outer box" Borderwidth="20">
+ </c:BoxedText>
+  <c:BoxedText TEXT="my inner box" Borderwidth="20">
+ </c:BoxedText>
+</apex:page>

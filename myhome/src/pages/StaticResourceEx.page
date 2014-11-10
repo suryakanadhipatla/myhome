@@ -1,0 +1,7 @@
+<apex:page >
+  
+ <!-- <apex:image value="{!$Resource.Logo}"/> -->
+  
+ <apex:image value="{!URLFOR($Resource.images, 'images/button.gif')}"/>
+  
+</apex:page>

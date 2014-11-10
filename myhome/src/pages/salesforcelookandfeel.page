@@ -1,0 +1,13 @@
+<apex:page standardcontroller="contact">
+<apex:form >
+<apex:pageblock title="contact details">
+contact name:<apex:inputText value="{!contact.name}"/>
+<apex:pageblockButtons >
+<apex:commandButton action="{!save}" value="save new contact"/>
+</apex:pageblockButtons>
+<apex:pageblocksection title="enter details">
+
+</apex:pageblocksection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page controller="searchcon" >
+<apex:form >
+<h1> enter the value:</h1> <apex:inputtext value="{!s}" />
+<h1> enter the value:</h1> <apex:outputtext value="{!s1}" />
+</apex:form>
+</apex:page>

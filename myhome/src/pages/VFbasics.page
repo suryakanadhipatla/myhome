@@ -1,0 +1,25 @@
+<apex:page standardcontroller="account">
+ <apex:form >
+<apex:pageblock >
+ <apex:pageblockbuttons >
+  <apex:commandButton action="{!save}" value="save"/>
+ <apex:commandButton action="{!cancel}" value="cancel"/>
+ </apex:pageblockbuttons>
+ <apex:pageblockSection >
+ <apex:inputfield value="{!account.name}"/>
+ <apex:inputtext value="{!account.id}"/>
+  </apex:pageblockSection>
+  </apex:pageBlock>
+  <apex:pageBlock >
+   <apex:pageblocktable value="{!account}" var="c">
+  <apex:column value="{!c.name}"/>
+  <apex:column value="{!account.id}"/>
+  <apex:column value="{!c.name}"/>
+  <apex:column value="{!c.rating}"/>
+  </apex:pageblocktable>
+  </apex:pageBlock>
+     <!--apex:enhancedList height="500" type="account"/-->
+    </apex:form>
+    <p><apex:image url="{!$Resource.mystaticresourceEx}" height="120" width="150"/></p>
+    <apex:image url="{!URLFOR($Resource.myzipEx, 'mypics/004.jpg')}" height="120" width="150"/>
+</apex:page>

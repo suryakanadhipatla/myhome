@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>ADDRESS2_CITY</groupColumn>
+    <mappings>
+        <sourceField>JobName</sourceField>
+        <sourceType>snapshot</sourceType>
+        <targetField>analytical_snap_shots__c.Name</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>ExecutionTime</sourceField>
+        <sourceType>snapshot</sourceType>
+        <targetField>analytical_snap_shots__c.LastViewedDate</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>ExecutionTime</sourceField>
+        <sourceType>snapshot</sourceType>
+        <targetField>analytical_snap_shots__c.LastReferencedDate</targetField>
+    </mappings>
+    <name>account and contacts snap shots</name>
+    <runningUser>suryakanadhipatla@gmail.com</runningUser>
+    <sourceReport>Account_Vs_contacts/Contact_Mailing_List_Report</sourceReport>
+    <targetObject>analytical_snap_shots__c</targetObject>
+</AnalyticSnapshot>

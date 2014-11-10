@@ -1,0 +1,15 @@
+<apex:page controller="ActionSupportEx">
+   <apex:form >
+       <apex:pageBlock >
+             Click Inside this block <apex:inputtext >
+            <apex:actionSupport event="onblur" action="{!sayHellow}" rerender="pgblck"/>
+            </apex:inputtext>  
+       </apex:pageBlock>
+       
+       <apex:outputPanel id="pgblck">
+       <apex:pageblock rendered="{!flag}">
+             <apex:outputText value="{!message }"/>
+       </apex:pageblock>
+       </apex:outputPanel>
+   </apex:form>
+</apex:page>

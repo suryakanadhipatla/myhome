@@ -1,0 +1,12 @@
+<apex:page standardController="Account" renderAs="pdf" showHeader="false" sidebar="false" >
+ <apex:pageBlock >
+ <apex:pageblockSection >
+   <apex:pageblockTable value="{!account.Contacts}" var="con">
+   <apex:column value="{!account.name}"/>
+     <apex:column value="{!account.phone}"/>
+       <apex:column value="{!account.rating}"/>
+   </apex:pageblockTable>
+ 
+ </apex:pageblockSection>
+ </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:component >
+  <apex:attribute name="TEXT" description="This will display the name"
+  type="string" required="True"/>
+  <apex:attribute name="Borderwidth"
+  description="This will set the width of the border"
+  type="integer" required="True"/>
+ <Div style="border-color:red;border-style:solid;border-width:{!Borderwidth}px">
+ <apex:outputText value="{!TEXT}">
+ </apex:outputText>
+ </div>
+</apex:component>

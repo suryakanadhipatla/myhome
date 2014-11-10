@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object stores infromation about various open job positions in our company</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Apex__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if Apex is mandatory for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if Apex is mandatory for this position</inlineHelpText>
+        <label>Apex</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if C# is required for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if C# is required for this position</inlineHelpText>
+        <label>C#</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <description>Enter the date when this position is filled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date when this position is filled</inlineHelpText>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Days_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(  Close_Date__c ), TODAY() - Open_Date__c , Close_Date__c-Open_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Educational_Requirements__c</fullName>
+        <description>provide the required Educational Requirements</description>
+        <externalId>false</externalId>
+        <inlineHelpText>provide the required Educational Requirements</inlineHelpText>
+        <label>Educational Requirements</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Functional_Area__c</fullName>
+        <description>select the functional area</description>
+        <externalId>false</externalId>
+        <inlineHelpText>select the functional area</inlineHelpText>
+        <label>Functional Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rail Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wharehousing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Hire_By__c</fullName>
+        <defaultValue>TODAY()+90</defaultValue>
+        <description>Enter the date when the candidate is hired for ths position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date when the candidate is hired for ths position</inlineHelpText>
+        <label>Hire By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Hiring_manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Select the respective hiring manager for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>respective hiring manager for this position</inlineHelpText>
+        <label>Hiring manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>positions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>JavaScript__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if javascript is required for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if javascript is required for this position</inlineHelpText>
+        <label>JavaScript</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Java__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>check the box if Java is required for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>check the box if Java is required for this position</inlineHelpText>
+        <label>Java</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job_Description__c</fullName>
+        <description>High-level description of the job and its duties.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>High-level description of the job and its duties.</inlineHelpText>
+        <label>Job Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Job_Level__c</fullName>
+        <description>select a job level</description>
+        <externalId>false</externalId>
+        <label>Job Level</label>
+        <picklist>
+            <controllingField>Functional_Area__c</controllingField>
+            <picklistValues>
+                <fullName>FN-100</fullName>
+                <controllingFieldValues>Finance</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-200</fullName>
+                <controllingFieldValues>Finance</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-300</fullName>
+                <controllingFieldValues>Finance</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-400</fullName>
+                <controllingFieldValues>Finance</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-100</fullName>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-200</fullName>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-300</fullName>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-400</fullName>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-100</fullName>
+                <controllingFieldValues>Information technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-200</fullName>
+                <controllingFieldValues>Information technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-300</fullName>
+                <controllingFieldValues>Information technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-400</fullName>
+                <controllingFieldValues>Information technology</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-100</fullName>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-200</fullName>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-300</fullName>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-400</fullName>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-100</fullName>
+                <controllingFieldValues>Rail Operations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-200</fullName>
+                <controllingFieldValues>Rail Operations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-300</fullName>
+                <controllingFieldValues>Rail Operations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-400</fullName>
+                <controllingFieldValues>Rail Operations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-100</fullName>
+                <controllingFieldValues>Wharehousing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-200</fullName>
+                <controllingFieldValues>Wharehousing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-300</fullName>
+                <controllingFieldValues>Wharehousing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-400</fullName>
+                <controllingFieldValues>Wharehousing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <description>select a location for the job position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>select a location for the job position</inlineHelpText>
+        <label>Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>San Francisco, CA</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Austin, TX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Boulder, CO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>London, England</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York, NY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mumbai, India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sydney, Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tokyo, Japan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Max_Pay__c</fullName>
+        <description>Enter the maximum salary offered for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the maximum salary offered for this position</inlineHelpText>
+        <label>Max Pay</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Pay__c</fullName>
+        <description>enter the min salary offered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>enter the min salary offered</inlineHelpText>
+        <label>Min Pay</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Open_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>Enter the date from when this position is available</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date from when this position is available</inlineHelpText>
+        <label>Open Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Responsibilities__c</fullName>
+        <description>Provide the Job responsibilities</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide the Job responsibilities</inlineHelpText>
+        <label>Responsibilities</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Skills_Required__c</fullName>
+        <description>Provide the detials of Skills Required for this job position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide the detials of Skills Required for this job position</inlineHelpText>
+        <label>Skills Required</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>select the status of the position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>select the status of the position</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New position</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Penading Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ope- Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed- filled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>closed- Not approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>closed- canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Travel_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>check the box if travel is required for this position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>check the box if travel is required for this position</inlineHelpText>
+        <label>Travel Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>job type ex: full time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>job type</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Full time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>part time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>internship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>position</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>position title</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>positions</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Functional_Area__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Job_Level__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hiring_manager__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Open_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Close_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Functional_Area__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Level__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Hiring_manager__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Open_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Close_Date__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Location__c</searchFilterFields>
+        <searchFilterFields>Functional_Area__c</searchFilterFields>
+        <searchFilterFields>Job_Level__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>Hiring_manager__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Open_Date__c</searchFilterFields>
+        <searchFilterFields>Close_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Functional_Area__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Job_Level__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Hiring_manager__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Open_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Close_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Close_status_Rule</fullName>
+        <active>true</active>
+        <description>Before changing status to close , close date should be specified</description>
+        <errorConditionFormula>ISBLANK( Close_Date__c ) &amp;&amp; (ISPICKVAL(Status__c,&quot;Closed- filled&quot;)|| ISPICKVAL(Status__c,&quot;Closed- filled&quot;))</errorConditionFormula>
+        <errorDisplayField>Close_Date__c</errorDisplayField>
+        <errorMessage>Before changing status to close , close date should be specified</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Min_Pay_Rule</fullName>
+        <active>true</active>
+        <description>Min pay should never exceed Max PAY</description>
+        <errorConditionFormula>Min_Pay__c &gt; Max_Pay__c</errorConditionFormula>
+        <errorMessage>Min pay should never exceed Max PAY</errorMessage>
+    </validationRules>
+</CustomObject>

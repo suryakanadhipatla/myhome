@@ -1,0 +1,10 @@
+Hiiii {!User.FirstName},
+The below {!Lead.Name} score is greater than 45 please convert the lead since lead is qualified. Please check the below details:
+
+lead name: {!Lead.Name}
+Lead owner firstname: {!Lead.OwnerFirstName}
+Lead score:{!Lead.Lead_Score__c}
+
+
+Regards,
+Abhilash

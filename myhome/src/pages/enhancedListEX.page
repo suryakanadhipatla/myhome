@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:enhancedList type="Contact" height="350"/>
+
+</apex:page>

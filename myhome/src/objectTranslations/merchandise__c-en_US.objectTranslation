@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>merchandise</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>merchandises</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- only inventory number --></help>
+        <label><!-- Total inventory --></label>
+        <name>Total_inventory__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter price in US dollars only --></help>
+        <label><!-- price --></label>
+        <name>price__c</name>
+    </fields>
+    <layouts>
+        <layout>merchandise Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>skillfeed</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- parent --></label>
+        <name>parent</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- skillfeed --></label>
+        <name>skillfeed</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

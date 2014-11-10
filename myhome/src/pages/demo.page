@@ -1,0 +1,12 @@
+<apex:page standardcontroller="account">
+  <apex:form >
+  <apex:pageblock >
+  <apex:pageblocksection title="this is your detailed section" >
+    <apex:commandbutton action="{!save}" value="save">
+    <apex:outputfield label="{!account.name}"/>
+    <apex:outputfield label="{!account.phone}"/>
+    </apex:commandbutton>
+  </apex:pageblocksection>
+  </apex:pageblock>
+   </apex:form>
+</apex:page>
