@@ -9,7 +9,7 @@ public class AbstractDemo extends AbstrctClass{
     public void display2()
     {
         
-        system.debug('mother of method 2');
+        system.debug('mother of method15');
         
     }
     
